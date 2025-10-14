@@ -1,7 +1,7 @@
-import { use, useState } from "react";
-import { Button } from "./Button";
+import { useState } from "react";
+import { Button } from "./Button.jsx";
 
-function GeneralInfo({onSubmit}){
+export function GeneralInfo({onSubmit}){
     const[genInfo, setGenInfo] = useState({
         name: "",
         email: "",
@@ -13,18 +13,21 @@ function GeneralInfo({onSubmit}){
         setGenInfo(prev => ({ ...prev, [id]: value }));
     }
 
-    function generalSubmit(){
+    function generalSubmit(e){
         e.preventDefault();
         onSubmit(genInfo);
     }
 
     return (
-        <div className="general-info">
+        <form className="general-info">
             <h2>General Information</h2>
+            <label htmlFor="name">Name: </label>
             <input type="text" id="name" value={genInfo.name} onChange={handleChange}/>
+            <label htmlFor="email">Email: </label>
             <input type="email" id="email" value={genInfo.email} onChange={handleChange}/>
+            <label htmlFor="phone">Phone #: </label>
             <input type="tel" id="phone" value={genInfo.phone} onChange={handleChange}/>
             <Button type="submit" text="Submit" onClick={generalSubmit} fontSize="18px"/>
-        </div>
+        </form>
     )
 }
