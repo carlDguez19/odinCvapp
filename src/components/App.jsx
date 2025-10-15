@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import {GeneralInfo} from './GeneralInfo.jsx'
+import {Education} from './Education.jsx'
+import {Experience} from './Experience.jsx'
 import '../assets/App.css'
 
 export function App() {
@@ -16,6 +18,8 @@ export function App() {
   return(
     <div className="AppCvFilled">
       <GeneralInfo onSubmit = {(data) => updateSectionHandler("general", data)}/>
+      <Education onSubmit = {(data) => updateSectionHandler("education", data)}/>
+      <Experience onSubmit={(data) => updateSectionHandler("experience", data)}/>
     </div>
   )
 }
