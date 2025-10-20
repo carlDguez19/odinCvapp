@@ -8,21 +8,29 @@ export function Preview({data}){
                     <p>{data.general.phone}</p>
                 </section>
             )}
-            {data.education && (
+            {data.education.length > 0 && (
                 <section>
                     <h3>Education</h3>
-                    <p>{data.education.school}</p>
-                    <p>{data.education.title}</p>
-                    <p>{data.education.dateStart} - {data.education.dateEnd}</p>
+                    {data.education.map((edu, index) => (
+                        <div key={index}>
+                            <p>{edu.school}</p>
+                            <p>{edu.title}</p>
+                            <p>{edu.dateStart} - {edu.dateEnd}</p>
+                        </div>
+                    ))}
                 </section>
             )}
-            {data.experience && (
+            {data.experience.length > 0 && (
                 <section>
                     <h3>Experience</h3>
-                    <p>{data.experience.company}</p>
-                    <p>{data.experience.position}</p>
-                    <p>{data.experience.dateStart} - {data.experience.dateEnd}</p>
-                    <p>{data.experience.tasks}</p>
+                    {data.experience.map((exp, index) => (
+                        <div key={index}>
+                            <p>{exp.company}</p>
+                            <p>{exp.position}</p>
+                            <p>{exp.dateStart} - {exp.dateEnd}</p>
+                            <p>{exp.tasks}</p>
+                        </div>
+                    ))}
                 </section>
             )}
         </div>

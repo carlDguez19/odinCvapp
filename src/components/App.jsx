@@ -4,12 +4,13 @@ import {Education} from './Education.jsx'
 import {Experience} from './Experience.jsx'
 import {Preview} from './Preview.jsx'
 import '../assets/App.css'
+import { Button } from './Button.jsx'
 
 export function App() {
   const [cvData, setData] = useState({
     general: null,
-    education: null,
-    experience: null
+    education: [],
+    experience: []
   });
 
   function updateSectionHandler(section, data){
@@ -17,8 +18,8 @@ export function App() {
   }
 
   return(
-    <div className='AppCvFilled'>
-      <div className='inputs'>
+    <div className="AppCvFilled">
+      <div className="inputs">
         <GeneralInfo onSubmit = {(data) => updateSectionHandler("general", data)}/>
         <Education onSubmit = {(data) => updateSectionHandler("education", data)}/>
         <Experience onSubmit={(data) => updateSectionHandler("experience", data)}/>
