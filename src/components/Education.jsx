@@ -9,7 +9,7 @@ export function Education({onSubmit}){//parameters will also include onEdit, onD
         dateEnd: "",
     }]);
 
-    const handleChange = (e) => {
+    function handleChange(index, e){
         const {id, value} = e.target;
         const upArr = [... eduEntries];
         upArr[index][id] = value;
@@ -37,13 +37,13 @@ export function Education({onSubmit}){//parameters will also include onEdit, onD
             {eduEntries.map((entry, index) => (
                 <div key={index} className="education-entry">
                     <label htmlFor="school">School: </label>
-                    <input type="text" id="school" onChange={handleChange} />
+                    <input type="text" id="school" value={entry.school} onChange={(e) => handleChange(index, e)} />
                     <label htmlFor="title">Title of Study: </label>
-                    <input type="text" id="title" onChange={handleChange} />
+                    <input type="text" id="title" value={entry.title} onChange={(e) => handleChange(index, e)} />
                     <label htmlFor="dateStart">Starting date: </label>
-                    <input type="date" id="dateStart" onChange={handleChange}/>
+                    <input type="date" id="dateStart" value={entry.dateStart} onChange={(e) => handleChange(index, e)}/>
                     <label htmlFor="dateEnd">Graduation date: </label>
-                    <input type="date" id="dateEnd" onChange={handleChange}/>
+                    {<input type="date" id="dateEnd" value={entry.dateEnd} onChange={(e) => handleChange(index, e)}/> /*handleChange(index) */}
                     {eduEntries.length > 1 && 
                         <Button type="button" text="Remove" onClick={() => remEntry(index)} fontSize="14px"/>
                     }
