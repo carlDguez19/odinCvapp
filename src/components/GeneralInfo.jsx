@@ -27,7 +27,7 @@ export function GeneralInfo({onSubmit}){
             <input type="email" id="email" value={genInfo.email} onChange={handleChange}/>
             <label htmlFor="phone">Phone #: </label>
             <input type="tel" id="phone" value={genInfo.phone} onChange={handleChange}/>
-            <Button type="submit" text="Submit" onClick={generalSubmit} fontSize="18px"/>
+            <Button className="genInfoSub" type="submit" text="Submit" onClick={generalSubmit} fontSize="18px"/>
         </form>
     )
 }

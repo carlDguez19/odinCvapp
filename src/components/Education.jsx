@@ -50,9 +50,9 @@ export function Education({onSubmit}){//parameters will also include onEdit, onD
                 </div>
             ))}
             {eduEntries.length < 6 && 
-                <Button type="button" text="Add Education" onClick={addEntry} fontSize="18px"/>
+                <Button className="eduInfoAdd" type="button" text="Add Education" onClick={addEntry} fontSize="18px"/>
             }
-            <Button type="submit" text="Submit" onClick={educationSubmit} fontSize="18px"/>
+            <Button className="eduInfoSub" type="submit" text="Submit" onClick={educationSubmit} fontSize="18px"/>
         </form>
     )
 }
