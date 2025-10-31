@@ -36,16 +36,26 @@ export function Experience({onSubmit}){//parameters will also include onEdit, on
             <h2>Experience</h2>
             {expEntries.map((entry, index) => (
                 <div key={index} className="experience-block">
-                    <label htmlFor="company">Company: </label>
-                    <input type="text" id="company" value= {entry.company} onChange={(e) => handleChange(index, e)}/>
-                    <label htmlFor="position">Position: </label>
-                    <input type="text" id="position" value={entry.position} onChange={(e) => handleChange(index, e)}/>
-                    <label htmlFor="dateStart">Starting date: </label>
-                    <input type="date" id="dateStart" value={entry.dateStart} onChange={(e) => handleChange(index, e)}/>
-                    <label htmlFor="dateEnd">Ending date: </label>
-                    <input type="date" id="dateEnd" value={entry.dateEnd} onChange={(e) => handleChange(index, e)}/>
-                    <label htmlFor="tasks">Main tasks: </label>
-                    <input type="text" id="tasks" value={entry.tasks} onChange={(e) => handleChange(index, e)}/>
+                    <div className="labelInputDiv">
+                        <label htmlFor="company">Company: </label>
+                        <input type="text" id="company" value= {entry.company} onChange={(e) => handleChange(index, e)}/>
+                    </div>
+                    <div className="labelInputDiv">
+                        <label htmlFor="position">Position: </label>
+                        <input type="text" id="position" value={entry.position} onChange={(e) => handleChange(index, e)}/>
+                    </div>
+                    <div className="labelInputDiv">
+                        <label htmlFor="dateStart">Starting date: </label>
+                        <input type="date" id="dateStart" value={entry.dateStart} onChange={(e) => handleChange(index, e)}/>
+                    </div>
+                    <div className="labelInputDiv">
+                        <label htmlFor="dateEnd">Ending date: </label>
+                        <input type="date" id="dateEnd" value={entry.dateEnd} onChange={(e) => handleChange(index, e)}/>
+                    </div>
+                    <div className="labelInputDiv">
+                        <label htmlFor="tasks">Main tasks: </label>
+                        <input type="text" id="tasks" value={entry.tasks} onChange={(e) => handleChange(index, e)}/>
+                    </div>
                     <Button type="button" text="Remove" onClick={() => remEntry(index)} fontSize="14px"/>
                 </div>    
             ))}

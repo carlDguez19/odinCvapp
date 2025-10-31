@@ -1,6 +1,6 @@
-export function Button({type, text, onClick, fontSize = '16px'}){
+export function Button({type, text, onClick, fontSize = '16px', className}) {
     const buttonStyle = {
         fontSize: fontSize,
     };
-    return <button type={type} style={buttonStyle} onClick={onClick}>{text}</button>;
+    return <button className={className} type={type} style={buttonStyle} onClick={onClick}>{text}</button>;
 }

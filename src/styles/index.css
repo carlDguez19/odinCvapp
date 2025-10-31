@@ -21,21 +21,26 @@
   max-width: 50%;;
 }
 
-.AppCvFilled{
+.AppCvFilled, .inputLabelDiv{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.general-info{
+.general-info, .education-block, .experience-block{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
 }
 
-.genInfoSub{
+.genInfoSub, .eduInfoSub, .eduInfoAdd, .expInfoSub, .expInfoAdd{
   margin-top: 20px;
+}
+label{
+  margin-top: 10px;
+  text-align: left;
+  align-self: start;
 }
 
 body {
