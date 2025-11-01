@@ -1,3 +1,4 @@
+@import url('./preview.css');
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,34 +14,59 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.AppCvFilled{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview{
+  margin: 20px;
+  width: 100vw;
+  max-width: 1000px;
+  min-height: 90vh;
+  background-color: #999;
+}
+
 .inputs{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 50%;;
 }
 
-.AppCvFilled, .inputLabelDiv{
+.labelInputDiv{
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.general-info, .education-block, .experience-block{
+.labelInputDiv label{
+  min-width: 150px;
+  text-align: right;
+}
+
+.general-block, .education-block, .experience-block{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.genInfoSub, .eduInfoSub, .eduInfoAdd, .expInfoSub, .expInfoAdd{
-  margin-top: 20px;
+.general-block, .education-block, .experience-block{
+  background-color: #555;
+  padding: 15px;
+  border-radius: 15px;
 }
-label{
-  margin-top: 10px;
-  text-align: left;
-  align-self: start;
+
+form{
+  margin-bottom: 25px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 body {

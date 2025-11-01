@@ -54,7 +54,7 @@ export function Experience({onSubmit}){//parameters will also include onEdit, on
                     </div>
                     <div className="labelInputDiv">
                         <label htmlFor="tasks">Main tasks: </label>
-                        <input type="text" id="tasks" value={entry.tasks} onChange={(e) => handleChange(index, e)}/>
+                        <textarea rows="5" cols="30" id="tasks" value={entry.tasks} onChange={(e) => handleChange(index, e)}/>
                     </div>
                     <Button type="button" text="Remove" onClick={() => remEntry(index)} fontSize="14px"/>
                 </div>    
