@@ -14,14 +14,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .AppCvFilled{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .preview{
   margin: 20px;
+  padding: 50px;
   width: 100vw;
   max-width: 1000px;
   min-height: 90vh;

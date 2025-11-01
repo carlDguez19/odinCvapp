@@ -3,7 +3,6 @@ import {GeneralInfo} from './GeneralInfo.jsx'
 import {Education} from './Education.jsx'
 import {Experience} from './Experience.jsx'
 import {Preview} from './Preview.jsx'
-import '../assets/App.css'
 import { Button } from './Button.jsx'
 
 export function App() {
