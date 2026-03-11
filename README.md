@@ -1,16 +1,70 @@
-# React + Vite
+# CV Application
+A simple React application that allows users to create, edit, and preview a résumé in real time. Built as part of The Odin Project React curriculum to practice component structure, controlled inputs, state management, and modular UI design.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Features
+- Enter and edit personal information
+- Add, edit, and delete education entries
+- Add, edit, and delete work experience entries
+- Live résumé preview that updates instantly
+- Modular, reusable components
+- Clean and simple UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Tech Stack
+- React (functional components + hooks)
+- JavaScript (ES6+)
+- CSS
+- Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```txt
+src/
+│
+├── components/
+│   ├── App.jsx
+│   ├── Button.jsx
+│   ├── Education.jsx
+│   ├── Experience.jsx
+│   ├── GeneralInfo.jsx
+│   └── Preview.jsx
+│
+├── styles/
+│   ├── index.css
+│   └── preview.css
+│
+├── main.jsx
+└── index.css
+```
+
+---
+
+## How It Works
+- Each form section is a controlled component using `useState`.
+- The main `App.jsx` component stores all résumé data and passes it down as props.
+- The `Preview` component receives the same state and renders a formatted résumé layout.
+- Education and experience sections use arrays to support multiple entries.
+- Add/Delete buttons update those arrays immutably.
+
+---
+
+## What I Learned
+- Structuring a React project with reusable components
+- Managing nested and dynamic state
+- Passing props cleanly between form and preview components
+- Handling lists of items (add/remove/edit)
+- Designing a simple, readable UI for form-heavy applicationsps
+
+---
+
+## Installation
+
+```bash
+npm install
+npm run dev
+```
