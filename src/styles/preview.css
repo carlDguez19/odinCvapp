@@ -22,3 +22,8 @@
 .eduInfoPreviewDiv, .expInfoPreviewDiv{
     margin: 0 30px;
 }
+
+.previewSec{
+    position: sticky;
+    top: 0;
+}

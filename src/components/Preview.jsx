@@ -1,6 +1,9 @@
 export function Preview({data}){
     return(
+        //Main preview container: renders formatted CV based on submitted data
         <div className="preview">
+
+            {/* General info section: only renders if data.general exists */}
             {data.general && (
                 <section>
                     <h2>{data.general.name}</h2>
@@ -10,10 +13,14 @@ export function Preview({data}){
                     </div>
                 </section>
             )}
+
+            {/* Education section: only renders if at least one entry exists */}
             {data.education.length > 0 && (
                 <section className="eduPreviewSection">
                     <h3>Education</h3>
                     <div className="line"></div>
+
+                    {/* Render each education entry */}
                     {data.education.map((edu, index) => (
                         <div className="eduInfoPreviewDiv" key={index}>
                             <h4>{edu.school}</h4>
@@ -23,10 +30,14 @@ export function Preview({data}){
                     ))}
                 </section>
             )}
+
+            {/* Experience section: only renders if at least one entry exists */}
             {data.experience.length > 0 && (
                 <section className="expPreviewSection">
                     <h3>Experience</h3>
                     <div className="line"></div>
+
+                    {/* Render each experience entry */}
                     {data.experience.map((exp, index) => (
                         <div className="expInfoPreviewDiv" key={index}>
                             <h4>{exp.company}</h4>
